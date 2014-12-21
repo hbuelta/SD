@@ -23,7 +23,8 @@
 // Include application, user and local libraries
 
 #include <SD.h>
-
+#include <Wire.h>
+#include "RTClib.h"
 
 // Define variables and constants
 //

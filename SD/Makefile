@@ -25,13 +25,13 @@
 #	LiquidCrystal Robot_Control Robot_Motor SD Servo SoftwareSerial SPI 
 #	Stepper TFT WiFi Wire 
 #
-APP_LIBS_LIST = SD
+APP_LIBS_LIST = SD Wire
 
 # List user's libraries here 
 # default = 0 = none
 #
 #
-USER_LIBS_LIST = 0
+USER_LIBS_LIST = RTClib
 
 # List core, application and user's libraries to be excluded
 # For example, WiFi may crash on Arduino 1.0.2, Esplora on Arduino 1.0.3, Firmata on Teensy 3.0,
