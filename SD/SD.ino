@@ -43,47 +43,27 @@
 
 // Include application, user and local libraries
 
+#include <SD.h>
+
 
 // Define variables and constants
 //
-// Brief	Name of the LED
-// Details	Each board has a LED but connected to a different pin
-//
-uint8_t myLED;
+
 
 
 //
 // Brief	Setup
-// Details	Define the pin the LED is connected to
-//
+
+
 // Add setup code 
 void setup() {
-  // myLED pin number
-#if defined(ENERGIA) // All LaunchPads supported by Energia
-    myLED = RED_LED;
-#elif defined(DIGISPARK) // Digispark specific
-    myLED = 1; // assuming model A
-#elif defined(MAPLE_IDE) // Maple specific
-    myLED = BOARD_LED_PIN;
-#elif defined(WIRING) // Wiring specific
-    myLED = 15;
-#elif defined(LITTLEROBOTFRIENDS) // LittleRobotFriends specific
-    myLED = 10;
-#else // Arduino, chipKIT, Teensy specific
-    myLED = 13;
-#endif
-
-    pinMode(myLED, OUTPUT);
+ 
 }
 
 //
 // Brief	Loop
-// Details	Blink the LED
-//
-// Add loop code 
+
+// Add loop code
 void loop() {
-    digitalWrite(myLED, HIGH);
-    delay(500);
-    digitalWrite(myLED, LOW);
-    delay(500);    
+    
 }
