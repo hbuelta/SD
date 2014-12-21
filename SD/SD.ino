@@ -8,7 +8,7 @@
 // 				Hector Buelta
 //
 // Date			21/12/14 16:34
-// Version		<#version#>
+// Version		0.1
 // 
 // Copyright	© Hector Buelta, 2014
 // Licence		<#license#>
