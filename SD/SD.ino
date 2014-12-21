@@ -44,18 +44,30 @@ SDClass SD1;
 
 
 // Add setup code 
-void setup() {
+/**
+	Sketch setuo
+	@param  none
+ */
+void setup()
+ {
     
     pinMode(chipSelectPin, OUTPUT);
-    SD1.begin(chipSelectPin);
+    
+     if(!SD1.begin(chipSelectPin)){
+         
+         //TODO: maybe light up red led // debug message to Serial console
+     }
 
  
 }
 
-//
-// Brief	Loop
 
 // Add loop code
-void loop() {
+/**
+	Sketch loop
+	@param  none
+ */
+void loop()
+ {
     
 }
