@@ -16,30 +16,9 @@
 // See			ReadMe.txt for references
 //
 
-// Core library for code-sense - IDE-based
-#if defined(WIRING) // Wiring specific
-#include "Wiring.h"
-#elif defined(MAPLE_IDE) // Maple specific
-#include "WProgram.h"
-#elif defined(MPIDE) // chipKIT specific
-#include "WProgram.h"
-#elif defined(DIGISPARK) // Digispark specific
+
 #include "Arduino.h"
-#elif defined(ENERGIA) // LaunchPad specific
-#include "Energia.h"
-#elif defined(LITTLEROBOTFRIENDS) // LittleRobotFriends specific
-#include "LRF.h"
-#elif defined(MICRODUINO) // Microduino specific
-#include "Arduino.h"
-#elif defined(TEENSYDUINO) // Teensy specific
-#include "Arduino.h"
-#elif defined(REDBEARLAB) // RedBearLab specific
-#include "Arduino.h"
-#elif defined(ARDUINO) // Arduino 1.0 and 1.5 specific
-#include "Arduino.h"
-#else // error
-#error Platform not defined
-#endif // end IDE
+
 
 // Include application, user and local libraries
 
@@ -49,7 +28,16 @@
 // Define variables and constants
 //
 
+/**
+	SD card chipselect pin (10 for adafruit SD datalogger shield)
+ */
+#define chipSelectPin 10
 
+
+/**
+	SD card object
+ */
+SDClass SD1;
 
 //
 // Brief	Setup
@@ -57,6 +45,10 @@
 
 // Add setup code 
 void setup() {
+    
+    pinMode(chipSelectPin, OUTPUT);
+    SD1.begin(chipSelectPin);
+
  
 }
 
