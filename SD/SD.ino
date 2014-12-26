@@ -31,7 +31,7 @@
 /**
 	Onewire bus on Arduino pin 3 // NEED FIX IN REAL BOARD
  */
-#define ONE_WIRE_BUS 3
+#define ONE_WIRE_BUS 5
 
 
 /**
