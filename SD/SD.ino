@@ -22,23 +22,23 @@
 
 // Include application, user and local libraries
 
-#include <SD.h>
-#include <Wire.h>
-#include "RTClib.h"
+#include "OneWire.h"
+#include "DallasTemperature.h"
 
 // Define variables and constants
 //
 
 /**
-	SD card chipselect pin (10 for adafruit SD datalogger shield)
+	Onewire bus on Arduino pin 2 // NEED FIX IN REAL BOARD
  */
-#define chipSelectPin 10
+#define ONE_WIRE_BUS 2
 
 
 /**
-	SD card object
+	OneWire object // sensors Object
  */
-SDClass SD1;
+OneWire oneWire(ONE_WIRE_BUS);
+DallasTemperature sensors(&oneWire);
 
 //
 // Brief	Setup
@@ -51,16 +51,13 @@ SDClass SD1;
  */
 void setup()
  {
-    
-    pinMode(chipSelectPin, OUTPUT);
-    
-     if(!SD1.begin(chipSelectPin)){
-         
-         //TODO: maybe light up red led // debug message to Serial console
+     // start serial port
+     Serial.begin(9600);
+     Serial.println("Dallas Temperature IC Test");
+     
+     // Start up the library
+     sensors.begin();
      }
-
- 
-}
 
 
 // Add loop code

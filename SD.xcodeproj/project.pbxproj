@@ -287,8 +287,8 @@
 		AA2A141221163501AA000133 /* Wire.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141221163501AA000133 /* Wire.h */; };
 		C42092A31A472000005CE836 /* LocalLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = C4C092A31A472000005CE836 /* LocalLibrary.h */; };
 		C42092FD1A472000005CE836 /* SD.ino in Sources */ = {isa = PBXBuildFile; fileRef = C4C092FD1A472000005CE836 /* SD.ino */; };
-		C438AAAF1A4DBEC0009D7945 /* DallasTemperature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C438AA9B1A4DBEC0009D7945 /* DallasTemperature.cpp */; };
-		C4B57AD01A475CCD00B509E3 /* RTClib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4B57ACE1A475CCD00B509E3 /* RTClib.cpp */; };
+		C43C24F31A4DC7F600A011E9 /* OneWire.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C43C24F11A4DC7F600A011E9 /* OneWire.cpp */; };
+		C43C250A1A4DC80100A011E9 /* DallasTemperature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C43C24F61A4DC80100A011E9 /* DallasTemperature.cpp */; };
 		C4C0929D1A471FFF005CE836 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4C0929C1A471FFF005CE836 /* main.cpp */; };
 		C4C092A21A472000005CE836 /* LocalLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4C092A11A472000005CE836 /* LocalLibrary.cpp */; };
 /* End PBXBuildFile section */
@@ -572,28 +572,25 @@
 		AAAA141221163501AA000131 /* twi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twi.h; sourceTree = "<group>"; };
 		AAAA141221163501AA000132 /* Wire.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wire.cpp; sourceTree = "<group>"; };
 		AAAA141221163501AA000133 /* Wire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wire.h; sourceTree = "<group>"; };
-		C438AA9A1A4DBEC0009D7945 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		C438AA9B1A4DBEC0009D7945 /* DallasTemperature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DallasTemperature.cpp; sourceTree = "<group>"; };
-		C438AA9C1A4DBEC0009D7945 /* DallasTemperature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DallasTemperature.h; sourceTree = "<group>"; };
-		C438AA9F1A4DBEC0009D7945 /* Alarm.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Alarm.pde; sourceTree = "<group>"; };
-		C438AAA11A4DBEC0009D7945 /* AlarmHandler.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AlarmHandler.pde; sourceTree = "<group>"; };
-		C438AAA31A4DBEC0009D7945 /* Multiple.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Multiple.pde; sourceTree = "<group>"; };
-		C438AAA51A4DBEC0009D7945 /* Simple.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Simple.pde; sourceTree = "<group>"; };
-		C438AAA71A4DBEC0009D7945 /* Single.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Single.pde; sourceTree = "<group>"; };
-		C438AAA91A4DBEC0009D7945 /* Tester.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tester.pde; sourceTree = "<group>"; };
-		C438AAAB1A4DBEC0009D7945 /* WaitForConversion.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WaitForConversion.pde; sourceTree = "<group>"; };
-		C438AAAD1A4DBEC0009D7945 /* WaitForConversion2.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WaitForConversion2.pde; sourceTree = "<group>"; };
-		C438AAAE1A4DBEC0009D7945 /* keywords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
+		C43C24EB1A4DC7F600A011E9 /* DS18x20_Temperature.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DS18x20_Temperature.pde; sourceTree = "<group>"; };
+		C43C24ED1A4DC7F600A011E9 /* DS2408_Switch.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DS2408_Switch.pde; sourceTree = "<group>"; };
+		C43C24EF1A4DC7F600A011E9 /* DS250x_PROM.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DS250x_PROM.pde; sourceTree = "<group>"; };
+		C43C24F01A4DC7F600A011E9 /* keywords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
+		C43C24F11A4DC7F600A011E9 /* OneWire.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OneWire.cpp; sourceTree = "<group>"; };
+		C43C24F21A4DC7F600A011E9 /* OneWire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneWire.h; sourceTree = "<group>"; };
+		C43C24F51A4DC80100A011E9 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C43C24F61A4DC80100A011E9 /* DallasTemperature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DallasTemperature.cpp; sourceTree = "<group>"; };
+		C43C24F71A4DC80100A011E9 /* DallasTemperature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DallasTemperature.h; sourceTree = "<group>"; };
+		C43C24FA1A4DC80100A011E9 /* Alarm.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Alarm.pde; sourceTree = "<group>"; };
+		C43C24FC1A4DC80100A011E9 /* AlarmHandler.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AlarmHandler.pde; sourceTree = "<group>"; };
+		C43C24FE1A4DC80100A011E9 /* Multiple.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Multiple.pde; sourceTree = "<group>"; };
+		C43C25001A4DC80100A011E9 /* Simple.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Simple.pde; sourceTree = "<group>"; };
+		C43C25021A4DC80100A011E9 /* Single.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Single.pde; sourceTree = "<group>"; };
+		C43C25041A4DC80100A011E9 /* Tester.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tester.pde; sourceTree = "<group>"; };
+		C43C25061A4DC80100A011E9 /* WaitForConversion.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WaitForConversion.pde; sourceTree = "<group>"; };
+		C43C25081A4DC80100A011E9 /* WaitForConversion2.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WaitForConversion2.pde; sourceTree = "<group>"; };
+		C43C25091A4DC80100A011E9 /* keywords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
 		C4B57ABF1A475CCD00B509E3 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
-		C4B57AC31A475CCD00B509E3 /* datecalc.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = datecalc.ino; sourceTree = "<group>"; };
-		C4B57AC51A475CCD00B509E3 /* ds1307.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ds1307.ino; sourceTree = "<group>"; };
-		C4B57AC71A475CCD00B509E3 /* ds1307nvram.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ds1307nvram.ino; sourceTree = "<group>"; };
-		C4B57AC91A475CCD00B509E3 /* ds1307SqwPin.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ds1307SqwPin.ino; sourceTree = "<group>"; };
-		C4B57ACB1A475CCD00B509E3 /* softrtc.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = softrtc.ino; sourceTree = "<group>"; };
-		C4B57ACC1A475CCD00B509E3 /* keywords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
-		C4B57ACD1A475CCD00B509E3 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		C4B57ACE1A475CCD00B509E3 /* RTClib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RTClib.cpp; sourceTree = "<group>"; };
-		C4B57ACF1A475CCD00B509E3 /* RTClib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTClib.h; sourceTree = "<group>"; };
 		C4C092991A471FFF005CE836 /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C0929C1A471FFF005CE836 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C4C0929E1A471FFF005CE836 /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -1206,93 +1203,138 @@
 			path = utility;
 			sourceTree = "<group>";
 		};
-		C438AA991A4DBEC0009D7945 /* DallasTemperature */ = {
+		C43C24E81A4DC7F600A011E9 /* OneWire */ = {
 			isa = PBXGroup;
 			children = (
-				C438AA9A1A4DBEC0009D7945 /* .gitignore */,
-				C438AA9B1A4DBEC0009D7945 /* DallasTemperature.cpp */,
-				C438AA9C1A4DBEC0009D7945 /* DallasTemperature.h */,
-				C438AA9D1A4DBEC0009D7945 /* examples */,
-				C438AAAE1A4DBEC0009D7945 /* keywords.txt */,
+				C43C24E91A4DC7F600A011E9 /* examples */,
+				C43C24F01A4DC7F600A011E9 /* keywords.txt */,
+				C43C24F11A4DC7F600A011E9 /* OneWire.cpp */,
+				C43C24F21A4DC7F600A011E9 /* OneWire.h */,
 			);
-			path = DallasTemperature;
+			path = OneWire;
 			sourceTree = "<group>";
 		};
-		C438AA9D1A4DBEC0009D7945 /* examples */ = {
+		C43C24E91A4DC7F600A011E9 /* examples */ = {
 			isa = PBXGroup;
 			children = (
-				C438AA9E1A4DBEC0009D7945 /* Alarm */,
-				C438AAA01A4DBEC0009D7945 /* AlarmHandler */,
-				C438AAA21A4DBEC0009D7945 /* Multiple */,
-				C438AAA41A4DBEC0009D7945 /* Simple */,
-				C438AAA61A4DBEC0009D7945 /* Single */,
-				C438AAA81A4DBEC0009D7945 /* Tester */,
-				C438AAAA1A4DBEC0009D7945 /* WaitForConversion */,
-				C438AAAC1A4DBEC0009D7945 /* WaitForConversion2 */,
+				C43C24EA1A4DC7F600A011E9 /* DS18x20_Temperature */,
+				C43C24EC1A4DC7F600A011E9 /* DS2408_Switch */,
+				C43C24EE1A4DC7F600A011E9 /* DS250x_PROM */,
 			);
 			path = examples;
 			sourceTree = "<group>";
 		};
-		C438AA9E1A4DBEC0009D7945 /* Alarm */ = {
+		C43C24EA1A4DC7F600A011E9 /* DS18x20_Temperature */ = {
 			isa = PBXGroup;
 			children = (
-				C438AA9F1A4DBEC0009D7945 /* Alarm.pde */,
+				C43C24EB1A4DC7F600A011E9 /* DS18x20_Temperature.pde */,
+			);
+			path = DS18x20_Temperature;
+			sourceTree = "<group>";
+		};
+		C43C24EC1A4DC7F600A011E9 /* DS2408_Switch */ = {
+			isa = PBXGroup;
+			children = (
+				C43C24ED1A4DC7F600A011E9 /* DS2408_Switch.pde */,
+			);
+			path = DS2408_Switch;
+			sourceTree = "<group>";
+		};
+		C43C24EE1A4DC7F600A011E9 /* DS250x_PROM */ = {
+			isa = PBXGroup;
+			children = (
+				C43C24EF1A4DC7F600A011E9 /* DS250x_PROM.pde */,
+			);
+			path = DS250x_PROM;
+			sourceTree = "<group>";
+		};
+		C43C24F41A4DC80100A011E9 /* DallasTemperature */ = {
+			isa = PBXGroup;
+			children = (
+				C43C24F51A4DC80100A011E9 /* .gitignore */,
+				C43C24F61A4DC80100A011E9 /* DallasTemperature.cpp */,
+				C43C24F71A4DC80100A011E9 /* DallasTemperature.h */,
+				C43C24F81A4DC80100A011E9 /* examples */,
+				C43C25091A4DC80100A011E9 /* keywords.txt */,
+			);
+			path = DallasTemperature;
+			sourceTree = "<group>";
+		};
+		C43C24F81A4DC80100A011E9 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				C43C24F91A4DC80100A011E9 /* Alarm */,
+				C43C24FB1A4DC80100A011E9 /* AlarmHandler */,
+				C43C24FD1A4DC80100A011E9 /* Multiple */,
+				C43C24FF1A4DC80100A011E9 /* Simple */,
+				C43C25011A4DC80100A011E9 /* Single */,
+				C43C25031A4DC80100A011E9 /* Tester */,
+				C43C25051A4DC80100A011E9 /* WaitForConversion */,
+				C43C25071A4DC80100A011E9 /* WaitForConversion2 */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		C43C24F91A4DC80100A011E9 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				C43C24FA1A4DC80100A011E9 /* Alarm.pde */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
 		};
-		C438AAA01A4DBEC0009D7945 /* AlarmHandler */ = {
+		C43C24FB1A4DC80100A011E9 /* AlarmHandler */ = {
 			isa = PBXGroup;
 			children = (
-				C438AAA11A4DBEC0009D7945 /* AlarmHandler.pde */,
+				C43C24FC1A4DC80100A011E9 /* AlarmHandler.pde */,
 			);
 			path = AlarmHandler;
 			sourceTree = "<group>";
 		};
-		C438AAA21A4DBEC0009D7945 /* Multiple */ = {
+		C43C24FD1A4DC80100A011E9 /* Multiple */ = {
 			isa = PBXGroup;
 			children = (
-				C438AAA31A4DBEC0009D7945 /* Multiple.pde */,
+				C43C24FE1A4DC80100A011E9 /* Multiple.pde */,
 			);
 			path = Multiple;
 			sourceTree = "<group>";
 		};
-		C438AAA41A4DBEC0009D7945 /* Simple */ = {
+		C43C24FF1A4DC80100A011E9 /* Simple */ = {
 			isa = PBXGroup;
 			children = (
-				C438AAA51A4DBEC0009D7945 /* Simple.pde */,
+				C43C25001A4DC80100A011E9 /* Simple.pde */,
 			);
 			path = Simple;
 			sourceTree = "<group>";
 		};
-		C438AAA61A4DBEC0009D7945 /* Single */ = {
+		C43C25011A4DC80100A011E9 /* Single */ = {
 			isa = PBXGroup;
 			children = (
-				C438AAA71A4DBEC0009D7945 /* Single.pde */,
+				C43C25021A4DC80100A011E9 /* Single.pde */,
 			);
 			path = Single;
 			sourceTree = "<group>";
 		};
-		C438AAA81A4DBEC0009D7945 /* Tester */ = {
+		C43C25031A4DC80100A011E9 /* Tester */ = {
 			isa = PBXGroup;
 			children = (
-				C438AAA91A4DBEC0009D7945 /* Tester.pde */,
+				C43C25041A4DC80100A011E9 /* Tester.pde */,
 			);
 			path = Tester;
 			sourceTree = "<group>";
 		};
-		C438AAAA1A4DBEC0009D7945 /* WaitForConversion */ = {
+		C43C25051A4DC80100A011E9 /* WaitForConversion */ = {
 			isa = PBXGroup;
 			children = (
-				C438AAAB1A4DBEC0009D7945 /* WaitForConversion.pde */,
+				C43C25061A4DC80100A011E9 /* WaitForConversion.pde */,
 			);
 			path = WaitForConversion;
 			sourceTree = "<group>";
 		};
-		C438AAAC1A4DBEC0009D7945 /* WaitForConversion2 */ = {
+		C43C25071A4DC80100A011E9 /* WaitForConversion2 */ = {
 			isa = PBXGroup;
 			children = (
-				C438AAAD1A4DBEC0009D7945 /* WaitForConversion2.pde */,
+				C43C25081A4DC80100A011E9 /* WaitForConversion2.pde */,
 			);
 			path = WaitForConversion2;
 			sourceTree = "<group>";
@@ -1300,76 +1342,12 @@
 		C4B57ABE1A475CCD00B509E3 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
-				C438AA991A4DBEC0009D7945 /* DallasTemperature */,
+				C43C24F41A4DC80100A011E9 /* DallasTemperature */,
+				C43C24E81A4DC7F600A011E9 /* OneWire */,
 				C4B57ABF1A475CCD00B509E3 /* readme.txt */,
-				C4B57AC01A475CCD00B509E3 /* RTClib */,
 			);
 			name = libraries;
 			path = ../../../Arduino/libraries;
-			sourceTree = "<group>";
-		};
-		C4B57AC01A475CCD00B509E3 /* RTClib */ = {
-			isa = PBXGroup;
-			children = (
-				C4B57AC11A475CCD00B509E3 /* examples */,
-				C4B57ACC1A475CCD00B509E3 /* keywords.txt */,
-				C4B57ACD1A475CCD00B509E3 /* README.txt */,
-				C4B57ACE1A475CCD00B509E3 /* RTClib.cpp */,
-				C4B57ACF1A475CCD00B509E3 /* RTClib.h */,
-			);
-			path = RTClib;
-			sourceTree = "<group>";
-		};
-		C4B57AC11A475CCD00B509E3 /* examples */ = {
-			isa = PBXGroup;
-			children = (
-				C4B57AC21A475CCD00B509E3 /* datecalc */,
-				C4B57AC41A475CCD00B509E3 /* ds1307 */,
-				C4B57AC61A475CCD00B509E3 /* ds1307nvram */,
-				C4B57AC81A475CCD00B509E3 /* ds1307SqwPin */,
-				C4B57ACA1A475CCD00B509E3 /* softrtc */,
-			);
-			path = examples;
-			sourceTree = "<group>";
-		};
-		C4B57AC21A475CCD00B509E3 /* datecalc */ = {
-			isa = PBXGroup;
-			children = (
-				C4B57AC31A475CCD00B509E3 /* datecalc.ino */,
-			);
-			path = datecalc;
-			sourceTree = "<group>";
-		};
-		C4B57AC41A475CCD00B509E3 /* ds1307 */ = {
-			isa = PBXGroup;
-			children = (
-				C4B57AC51A475CCD00B509E3 /* ds1307.ino */,
-			);
-			path = ds1307;
-			sourceTree = "<group>";
-		};
-		C4B57AC61A475CCD00B509E3 /* ds1307nvram */ = {
-			isa = PBXGroup;
-			children = (
-				C4B57AC71A475CCD00B509E3 /* ds1307nvram.ino */,
-			);
-			path = ds1307nvram;
-			sourceTree = "<group>";
-		};
-		C4B57AC81A475CCD00B509E3 /* ds1307SqwPin */ = {
-			isa = PBXGroup;
-			children = (
-				C4B57AC91A475CCD00B509E3 /* ds1307SqwPin.ino */,
-			);
-			path = ds1307SqwPin;
-			sourceTree = "<group>";
-		};
-		C4B57ACA1A475CCD00B509E3 /* softrtc */ = {
-			isa = PBXGroup;
-			children = (
-				C4B57ACB1A475CCD00B509E3 /* softrtc.ino */,
-			);
-			path = softrtc;
 			sourceTree = "<group>";
 		};
 		C4C0928D1A471FFF005CE836 = {
@@ -1826,12 +1804,11 @@
 				AA2A141221163501AA0000A0 /* GSM3ShieldV1ModemVerification.h in Sources */,
 				AA2A141221163501AA0000A1 /* GSM3ShieldV1MultiClientProvider.cpp in Sources */,
 				AA2A141221163501AA0000A2 /* GSM3ShieldV1MultiClientProvider.h in Sources */,
-				C438AAAF1A4DBEC0009D7945 /* DallasTemperature.cpp in Sources */,
+				C43C250A1A4DC80100A011E9 /* DallasTemperature.cpp in Sources */,
 				AA2A141221163501AA0000A3 /* GSM3ShieldV1MultiServerProvider.cpp in Sources */,
 				AA2A141221163501AA0000A4 /* GSM3ShieldV1MultiServerProvider.h in Sources */,
 				AA2A141221163501AA0000A5 /* GSM3ShieldV1PinManagement.cpp in Sources */,
 				AA2A141221163501AA0000A6 /* GSM3ShieldV1PinManagement.h in Sources */,
-				C4B57AD01A475CCD00B509E3 /* RTClib.cpp in Sources */,
 				AA2A141221163501AA0000A7 /* GSM3ShieldV1ScanNetworks.cpp in Sources */,
 				AA2A141221163501AA0000A8 /* GSM3ShieldV1ScanNetworks.h in Sources */,
 				AA2A141221163501AA0000A9 /* GSM3ShieldV1ServerProvider.cpp in Sources */,
@@ -1913,6 +1890,7 @@
 				AA2A141221163501AA0000FB /* Sd2PinMap.h in Sources */,
 				AA2A141221163501AA0000FC /* SdFat.h in Sources */,
 				AA2A141221163501AA0000FD /* SdFatmainpage.h in Sources */,
+				C43C24F31A4DC7F600A011E9 /* OneWire.cpp in Sources */,
 				AA2A141221163501AA0000FE /* SdFatUtil.h in Sources */,
 				AA2A141221163501AA0000FF /* SdFile.cpp in Sources */,
 				AA2A141221163501AA000100 /* SdInfo.h in Sources */,
