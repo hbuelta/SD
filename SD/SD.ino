@@ -25,8 +25,16 @@
 #include "OneWire.h"
 #include "DallasTemperature.h"
 
+// local functions declaration
+
+void printAddress(DeviceAddress deviceAddress);
+
 // Define variables and constants
 //
+
+// Always will access sensors by its DeviceAddress
+
+DeviceAddress sensor1Address;
 
 /**
 	Onewire bus on Arduino pin 5 // NEED FIX IN REAL BOARD
@@ -56,8 +64,25 @@ void setup()
      Serial.println("Dallas Temperature IC Test");
      
      // Start up the library
+     
      sensors.begin();
-     }
+     //Requesting how many sensors
+     
+     Serial.print("Number of sensors in bus: ");
+     Serial.print(sensors.getDeviceCount(), DEC);
+     Serial.print("\n");
+     
+     //Get address of first sensor in bus (index 0)
+     
+     sensors.getAddress(sensor1Address, 0);
+     
+     //Print address of first sensor (index 0)
+     
+     Serial.print("Sensor 1 HEX Address:");
+     printAddress(sensor1Address);
+     Serial.print("\n");
+ 
+ }
 
 
 // Add loop code
@@ -68,4 +93,21 @@ void setup()
 void loop()
  {
     
+}
+
+//Local functions
+
+/**
+	Print HEX representation of a OneWire object Address
+	@param deviceAddress deviceAddress object to print
+ */
+void printAddress(DeviceAddress deviceAddress)
+
+{
+    for (uint8_t i = 0; i < 8; i++)
+    {
+        // zero pad the address if necessary
+        if (deviceAddress[i] < 16) Serial.print("0");
+        Serial.print(deviceAddress[i], HEX);
+    }
 }
