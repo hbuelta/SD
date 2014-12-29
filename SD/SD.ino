@@ -61,7 +61,7 @@ void setup()
  {
      // start serial port
      Serial.begin(9600);
-     Serial.println("Dallas Temperature IC Test");
+     Serial.println("Dallas Temperature Sensor Test");
      Serial.print("\n");
      
      // Start up the library
