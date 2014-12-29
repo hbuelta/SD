@@ -61,7 +61,7 @@ void setup()
  {
      // start serial port
      Serial.begin(9600);
-     Serial.println("Dallas Temperature IC Test");
+     Serial.println("Dallas Temperature Sensor Test");
      Serial.print("\n");
      
      // Start up the library
@@ -93,7 +93,10 @@ void setup()
  */
 void loop()
  {
-    
+     sensors.requestTemperatures(); // Send the command to get temperatures
+     Serial.print("Temperature for the device 1 (index 0) is: ");
+     Serial.println(sensors.getTempCByIndex(0));
+     delay(2000);
 }
 
 //Local functions
