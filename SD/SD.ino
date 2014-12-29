@@ -62,6 +62,7 @@ void setup()
      // start serial port
      Serial.begin(9600);
      Serial.println("Dallas Temperature IC Test");
+     Serial.print("\n");
      
      // Start up the library
      
@@ -78,7 +79,7 @@ void setup()
      
      //Print address of first sensor (index 0)
      
-     Serial.print("Sensor 1 HEX Address:");
+     Serial.print("Sensor 1 HEX Address: ");
      printAddress(sensor1Address);
      Serial.print("\n");
  
