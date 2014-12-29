@@ -93,6 +93,7 @@ void setup()
  */
 void loop()
  {
+     sensors.requestTemperatures(); // Send the command to get temperatures
      Serial.print("TEMP for address:");
      printAddress(sensor1Address);
      Serial.print(": ");
