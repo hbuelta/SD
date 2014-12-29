@@ -95,7 +95,7 @@ void loop()
  {
      Serial.print("TEMP for address:");
      printAddress(sensor1Address);
-     Serial.print("= ");
+     Serial.print(": ");
      Serial.print(sensors.getTempC(sensor1Address));
      delay(2000);
 }
