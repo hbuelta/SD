@@ -29,6 +29,7 @@
 // local functions declaration
 
 void printAddress(DeviceAddress deviceAddress);
+void displayTemperaturebySensor(void);
 
 // Define variables and constants
 //
@@ -36,6 +37,7 @@ void printAddress(DeviceAddress deviceAddress);
 // Always will access sensors by its DeviceAddress
 
 DeviceAddress sensor1Address;
+Schedular scheduledDisplayTemperature;
 
 /**
 	Onewire bus on Arduino pin 5 // NEED FIX IN REAL BOARD
@@ -94,13 +96,8 @@ void setup()
  */
 void loop()
  {
-     sensors.requestTemperatures(); // Send the command to get temperatures
-     Serial.print("TEMP for address:");
-     printAddress(sensor1Address);
-     Serial.print(": ");
-     Serial.print(sensors.getTempC(sensor1Address));
-     delay(2000);
-}
+     scheduledDisplayTemperature.check(displayTemperaturebySensor, 2000);
+     }
 
 //Local functions
 
@@ -117,4 +114,18 @@ void printAddress(DeviceAddress deviceAddress)
         if (deviceAddress[i] < 16) Serial.print("0");
         Serial.print(deviceAddress[i], HEX);
     }
+}
+
+/**
+	Issues temp request to all sensors and Serial-display temperature for one sensor (hardcoded)
+	@param  none
+ */
+void displayTemperaturebySensor()
+
+{
+    sensors.requestTemperatures(); // Send the command to get temperatures
+    Serial.print("TEMP for address:");
+    printAddress(sensor1Address);
+    Serial.print(": ");
+    Serial.print(sensors.getTempC(sensor1Address));
 }
