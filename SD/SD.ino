@@ -85,6 +85,10 @@ void setup()
      Serial.print("Sensor 1 HEX Address: ");
      printAddress(sensor1Address);
      Serial.print("\n");
+     
+     // start scheduling
+     
+     scheduledDisplayTemperature.start();
  
  }
 
