@@ -294,6 +294,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D47F2261A52FA71002149BA /* EasyScheduler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EasyScheduler.cpp; sourceTree = "<group>"; };
+		0D47F2271A52FA71002149BA /* EasyScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyScheduler.h; sourceTree = "<group>"; };
+		0D47F22A1A52FA71002149BA /* DelayTaskOnStartup.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DelayTaskOnStartup.ino; sourceTree = "<group>"; };
+		0D47F22C1A52FA71002149BA /* MultiTaskSchedule.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MultiTaskSchedule.ino; sourceTree = "<group>"; };
+		0D47F22E1A52FA71002149BA /* RunOnly5Times.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RunOnly5Times.ino; sourceTree = "<group>"; };
+		0D47F2301A52FA71002149BA /* SimpleTaskSchedule.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleTaskSchedule.ino; sourceTree = "<group>"; };
 		AAAA141221163501AA000005 /* Arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arduino.h; sourceTree = "<group>"; };
 		AAAA141221163501AA000007 /* malloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = malloc.c; sourceTree = "<group>"; };
 		AAAA141221163501AA000008 /* realloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = realloc.c; sourceTree = "<group>"; };
@@ -684,6 +690,59 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		0D47F2251A52FA71002149BA /* EasyScheduler */ = {
+			isa = PBXGroup;
+			children = (
+				0D47F2261A52FA71002149BA /* EasyScheduler.cpp */,
+				0D47F2271A52FA71002149BA /* EasyScheduler.h */,
+				0D47F2281A52FA71002149BA /* examples */,
+			);
+			path = EasyScheduler;
+			sourceTree = "<group>";
+		};
+		0D47F2281A52FA71002149BA /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				0D47F2291A52FA71002149BA /* DelayTaskOnStartup */,
+				0D47F22B1A52FA71002149BA /* MultiTaskSchedule */,
+				0D47F22D1A52FA71002149BA /* RunOnly5Times */,
+				0D47F22F1A52FA71002149BA /* SimpleTaskSchedule */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		0D47F2291A52FA71002149BA /* DelayTaskOnStartup */ = {
+			isa = PBXGroup;
+			children = (
+				0D47F22A1A52FA71002149BA /* DelayTaskOnStartup.ino */,
+			);
+			path = DelayTaskOnStartup;
+			sourceTree = "<group>";
+		};
+		0D47F22B1A52FA71002149BA /* MultiTaskSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				0D47F22C1A52FA71002149BA /* MultiTaskSchedule.ino */,
+			);
+			path = MultiTaskSchedule;
+			sourceTree = "<group>";
+		};
+		0D47F22D1A52FA71002149BA /* RunOnly5Times */ = {
+			isa = PBXGroup;
+			children = (
+				0D47F22E1A52FA71002149BA /* RunOnly5Times.ino */,
+			);
+			path = RunOnly5Times;
+			sourceTree = "<group>";
+		};
+		0D47F22F1A52FA71002149BA /* SimpleTaskSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				0D47F2301A52FA71002149BA /* SimpleTaskSchedule.ino */,
+			);
+			path = SimpleTaskSchedule;
+			sourceTree = "<group>";
+		};
 		AAAA141221163501AA000000 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1342,6 +1401,7 @@
 		C4B57ABE1A475CCD00B509E3 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				0D47F2251A52FA71002149BA /* EasyScheduler */,
 				C43C24F41A4DC80100A011E9 /* DallasTemperature */,
 				C43C24E81A4DC7F600A011E9 /* OneWire */,
 				C4B57ABF1A475CCD00B509E3 /* readme.txt */,
