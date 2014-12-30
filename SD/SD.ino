@@ -51,11 +51,7 @@ Schedular scheduledDisplayTemperature;
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
 
-//
-// Brief	Setup
 
-
-// Add setup code 
 /**
 	Sketch setuo
 	@param  none
@@ -93,7 +89,7 @@ void setup()
  }
 
 
-// Add loop code
+
 /**
 	Sketch loop
 	@param  none
@@ -127,9 +123,16 @@ void printAddress(DeviceAddress deviceAddress)
 void displayTemperaturebySensor()
 
 {
-    sensors.requestTemperatures(); // Send the command to get temperatures
+    sensors.requestTemperatures(); // Issue command to get temperatures
     Serial.print("TEMP for address:");
     printAddress(sensor1Address);
     Serial.print(": ");
     Serial.print(sensors.getTempC(sensor1Address));
+    Serial.print("\n");
 }
+
+
+
+
+
+
