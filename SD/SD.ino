@@ -34,7 +34,7 @@ void displayTemperaturebySensor(void);
 // Define variables and constants
 //
 
-// Always will access sensors by its DeviceAddress
+#define LOWFREQTASK 1000
 
 DeviceAddress sensor1Address;
 Schedular scheduledDisplayTemperature;
@@ -96,7 +96,7 @@ void setup()
  */
 void loop()
  {
-     scheduledDisplayTemperature.check(displayTemperaturebySensor, 2000);
+     scheduledDisplayTemperature.check(displayTemperaturebySensor, LOWFREQTASK);
      }
 
 //Local functions
