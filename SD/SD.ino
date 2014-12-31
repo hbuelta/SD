@@ -123,7 +123,7 @@ void printAddress(DeviceAddress deviceAddress)
 void scheduledTask1Callback()
 
 {
-    sensors.requestTemperatures(); // Issue command to get temperatures
+    sensors.requestTemperatures();
     Serial.print("TEMP for address:");
     printAddress(sensor1Address);
     Serial.print(": ");
