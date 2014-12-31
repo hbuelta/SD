@@ -29,7 +29,7 @@
 // local functions declaration
 
 void printAddress(DeviceAddress deviceAddress);
-void displayTemperaturebySensor(void);
+void scheduledTask1Callback(void);
 
 // Define variables and constants
 //
@@ -37,7 +37,7 @@ void displayTemperaturebySensor(void);
 #define LOWFREQTASK 1000
 
 DeviceAddress sensor1Address;
-Schedular scheduledDisplayTemperature;
+Schedular scheduledTask1;
 
 /**
 	Onewire bus on Arduino pin 5 // NEED FIX IN REAL BOARD
@@ -84,7 +84,7 @@ void setup()
      
      // start scheduling
      
-     scheduledDisplayTemperature.start();
+     scheduledTask1.start();
  
  }
 
@@ -96,7 +96,7 @@ void setup()
  */
 void loop()
  {
-     scheduledDisplayTemperature.check(displayTemperaturebySensor, LOWFREQTASK);
+     scheduledTask1.check(scheduledTask1Callback, LOWFREQTASK);
      }
 
 //Local functions
@@ -120,7 +120,7 @@ void printAddress(DeviceAddress deviceAddress)
 	Issues temp request to all sensors and Serial-display temperature for one sensor (hardcoded)
 	@param  none
  */
-void displayTemperaturebySensor()
+void scheduledTask1Callback()
 
 {
     sensors.requestTemperatures(); // Issue command to get temperatures
