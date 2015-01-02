@@ -24,6 +24,8 @@
 
 #include "OneWire.h"
 #include "DallasTemperature.h"
+#include "Scheduler.h"
+#include "TimerOne.h"
 
 // local functions declaration
 

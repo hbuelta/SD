@@ -287,6 +287,10 @@
 		AA2A141221163501AA000133 /* Wire.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141221163501AA000133 /* Wire.h */; };
 		C42092A31A472000005CE836 /* LocalLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = C4C092A31A472000005CE836 /* LocalLibrary.h */; };
 		C42092FD1A472000005CE836 /* SD.ino in Sources */ = {isa = PBXBuildFile; fileRef = C4C092FD1A472000005CE836 /* SD.ino */; };
+		C42A5F021A56E5A9000AF4E1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C42A5EFF1A56E5A9000AF4E1 /* README.md */; };
+		C42A5F031A56E5A9000AF4E1 /* Scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C42A5F001A56E5A9000AF4E1 /* Scheduler.cpp */; };
+		C42A5F101A56E72E000AF4E1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C42A5F0D1A56E72E000AF4E1 /* README.md */; };
+		C42A5F111A56E72E000AF4E1 /* TimerOne.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C42A5F0E1A56E72E000AF4E1 /* TimerOne.cpp */; };
 		C43C24F31A4DC7F600A011E9 /* OneWire.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C43C24F11A4DC7F600A011E9 /* OneWire.cpp */; };
 		C43C250A1A4DC80100A011E9 /* DallasTemperature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C43C24F61A4DC80100A011E9 /* DallasTemperature.cpp */; };
 		C4C0929D1A471FFF005CE836 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4C0929C1A471FFF005CE836 /* main.cpp */; };
@@ -572,6 +576,18 @@
 		AAAA141221163501AA000131 /* twi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twi.h; sourceTree = "<group>"; };
 		AAAA141221163501AA000132 /* Wire.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wire.cpp; sourceTree = "<group>"; };
 		AAAA141221163501AA000133 /* Wire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wire.h; sourceTree = "<group>"; };
+		C42A5EFD1A56E5A9000AF4E1 /* Scheduler.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Scheduler.ino; sourceTree = "<group>"; };
+		C42A5EFE1A56E5A9000AF4E1 /* keywords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
+		C42A5EFF1A56E5A9000AF4E1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C42A5F001A56E5A9000AF4E1 /* Scheduler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scheduler.cpp; sourceTree = "<group>"; };
+		C42A5F011A56E5A9000AF4E1 /* Scheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scheduler.h; sourceTree = "<group>"; };
+		C42A5F061A56E72E000AF4E1 /* known_16bit_timers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = known_16bit_timers.h; sourceTree = "<group>"; };
+		C42A5F091A56E72E000AF4E1 /* FanSpeed.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FanSpeed.pde; sourceTree = "<group>"; };
+		C42A5F0B1A56E72E000AF4E1 /* Interrupt.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Interrupt.pde; sourceTree = "<group>"; };
+		C42A5F0C1A56E72E000AF4E1 /* keywords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
+		C42A5F0D1A56E72E000AF4E1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C42A5F0E1A56E72E000AF4E1 /* TimerOne.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimerOne.cpp; sourceTree = "<group>"; };
+		C42A5F0F1A56E72E000AF4E1 /* TimerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerOne.h; sourceTree = "<group>"; };
 		C43C24EB1A4DC7F600A011E9 /* DS18x20_Temperature.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DS18x20_Temperature.pde; sourceTree = "<group>"; };
 		C43C24ED1A4DC7F600A011E9 /* DS2408_Switch.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DS2408_Switch.pde; sourceTree = "<group>"; };
 		C43C24EF1A4DC7F600A011E9 /* DS250x_PROM.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DS250x_PROM.pde; sourceTree = "<group>"; };
@@ -1203,6 +1219,80 @@
 			path = utility;
 			sourceTree = "<group>";
 		};
+		C42A5EFA1A56E5A9000AF4E1 /* Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				C42A5EFB1A56E5A9000AF4E1 /* examples */,
+				C42A5EFE1A56E5A9000AF4E1 /* keywords.txt */,
+				C42A5EFF1A56E5A9000AF4E1 /* README.md */,
+				C42A5F001A56E5A9000AF4E1 /* Scheduler.cpp */,
+				C42A5F011A56E5A9000AF4E1 /* Scheduler.h */,
+			);
+			path = Scheduler;
+			sourceTree = "<group>";
+		};
+		C42A5EFB1A56E5A9000AF4E1 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				C42A5EFC1A56E5A9000AF4E1 /* Scheduler */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		C42A5EFC1A56E5A9000AF4E1 /* Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				C42A5EFD1A56E5A9000AF4E1 /* Scheduler.ino */,
+			);
+			path = Scheduler;
+			sourceTree = "<group>";
+		};
+		C42A5F041A56E72E000AF4E1 /* TimerOne */ = {
+			isa = PBXGroup;
+			children = (
+				C42A5F051A56E72E000AF4E1 /* config */,
+				C42A5F071A56E72E000AF4E1 /* examples */,
+				C42A5F0C1A56E72E000AF4E1 /* keywords.txt */,
+				C42A5F0D1A56E72E000AF4E1 /* README.md */,
+				C42A5F0E1A56E72E000AF4E1 /* TimerOne.cpp */,
+				C42A5F0F1A56E72E000AF4E1 /* TimerOne.h */,
+			);
+			path = TimerOne;
+			sourceTree = "<group>";
+		};
+		C42A5F051A56E72E000AF4E1 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				C42A5F061A56E72E000AF4E1 /* known_16bit_timers.h */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		C42A5F071A56E72E000AF4E1 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				C42A5F081A56E72E000AF4E1 /* FanSpeed */,
+				C42A5F0A1A56E72E000AF4E1 /* Interrupt */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		C42A5F081A56E72E000AF4E1 /* FanSpeed */ = {
+			isa = PBXGroup;
+			children = (
+				C42A5F091A56E72E000AF4E1 /* FanSpeed.pde */,
+			);
+			path = FanSpeed;
+			sourceTree = "<group>";
+		};
+		C42A5F0A1A56E72E000AF4E1 /* Interrupt */ = {
+			isa = PBXGroup;
+			children = (
+				C42A5F0B1A56E72E000AF4E1 /* Interrupt.pde */,
+			);
+			path = Interrupt;
+			sourceTree = "<group>";
+		};
 		C43C24E81A4DC7F600A011E9 /* OneWire */ = {
 			isa = PBXGroup;
 			children = (
@@ -1342,6 +1432,8 @@
 		C4B57ABE1A475CCD00B509E3 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C42A5F041A56E72E000AF4E1 /* TimerOne */,
+				C42A5EFA1A56E5A9000AF4E1 /* Scheduler */,
 				C43C24F41A4DC80100A011E9 /* DallasTemperature */,
 				C43C24E81A4DC7F600A011E9 /* OneWire */,
 				C4B57ABF1A475CCD00B509E3 /* readme.txt */,
@@ -1731,6 +1823,7 @@
 				AA2A141221163501AA000050 /* WMath.cpp in Sources */,
 				AA2A141221163501AA000051 /* WString.cpp in Sources */,
 				AA2A141221163501AA000052 /* WString.h in Sources */,
+				C42A5F101A56E72E000AF4E1 /* README.md in Sources */,
 				AA2A141221163501AA000055 /* EEPROM.cpp in Sources */,
 				AA2A141221163501AA000056 /* EEPROM.h in Sources */,
 				AA2A141221163501AA000058 /* Esplora.cpp in Sources */,
@@ -1746,6 +1839,7 @@
 				AA2A141221163501AA000063 /* EthernetServer.cpp in Sources */,
 				AA2A141221163501AA000064 /* EthernetServer.h in Sources */,
 				AA2A141221163501AA000065 /* EthernetUdp.cpp in Sources */,
+				C42A5F031A56E5A9000AF4E1 /* Scheduler.cpp in Sources */,
 				AA2A141221163501AA000066 /* EthernetUdp.h in Sources */,
 				AA2A141221163501AA000067 /* util.h in Sources */,
 				AA2A141221163501AA000069 /* socket.cpp in Sources */,
@@ -1873,6 +1967,8 @@
 				AA2A141221163501AA0000E7 /* VirtualKeyboard.h in Sources */,
 				AA2A141221163501AA0000E8 /* Wire.cpp in Sources */,
 				AA2A141221163501AA0000E9 /* Wire.h in Sources */,
+				C42A5F111A56E72E000AF4E1 /* TimerOne.cpp in Sources */,
+				C42A5F021A56E5A9000AF4E1 /* README.md in Sources */,
 				AA2A141221163501AA0000EB /* ArduinoRobotMotorBoard.cpp in Sources */,
 				AA2A141221163501AA0000EC /* ArduinoRobotMotorBoard.h in Sources */,
 				AA2A141221163501AA0000ED /* EasyTransfer2.cpp in Sources */,
