@@ -27,36 +27,56 @@
 #include "Scheduler.h"
 #include "TimerOne.h"
 
+//local constants and macros
+
+/**
+	Onewire bus on Arduino pin 5 // NEED CORRECT ASSIGN IN ACTUAL BOARD
+ */
+#define ONE_WIRE_BUS 5
+/**
+	Timer1 set to 10ms (100Hz)
+ */
+#define HZ100 10000
+
 // local functions declaration
 
 void printAddress(DeviceAddress deviceAddress);
+void timerCallbackScheduler(void);
+void checkTemperature(void);
 
 // Define variables and constants
-//
 
-// Always will access sensors by its DeviceAddress
-
-DeviceAddress sensor1Address;
 
 /**
-	Onewire bus on Arduino pin 5 // NEED FIX IN REAL BOARD
+	Hardware Timer1 wrapper object
  */
-#define ONE_WIRE_BUS 5
+TimerOne schedulerTimer;
 
+
+/**
+	Scheduler object that will advance 1 step every overflow of schedulerTimer
+ */
+Scheduler scheduler;
+
+
+/**
+	Temperature sensor unque address // Always will access sensors by its DeviceAddress
+ */
+DeviceAddress sensor1Address;
 
 /**
 	OneWire object // sensors Object
  */
 OneWire oneWire(ONE_WIRE_BUS);
+
+/**
+    Dallas temperature sensor object
+ */
 DallasTemperature sensors(&oneWire);
 
-//
-// Brief	Setup
 
-
-// Add setup code 
 /**
-	Sketch setuo
+	Sketch setup code
 	@param  none
  */
 void setup()
@@ -66,8 +86,15 @@ void setup()
      Serial.println("Dallas Temperature Sensor Test");
      Serial.print("\n");
      
-     // Start up the library
+     //Scheduler timer init
+     schedulerTimer.initialize(HZ100);
+     schedulerTimer.attachInterrupt(timerCallbackScheduler);
      
+     //Scheduler init
+     scheduler.createSchedule(100, -1, FALSE, checkTemperature);
+     
+     
+     // Start up the sensor library
      sensors.begin();
      //Requesting how many sensors
      
@@ -95,10 +122,7 @@ void setup()
  */
 void loop()
  {
-     sensors.requestTemperatures(); // Send the command to get temperatures
-     Serial.print("Temperature for the device 1 (index 0) is: ");
-     Serial.println(sensors.getTempCByIndex(0));
-     delay(2000);
+     scheduler.serviceScheduledEvents();
 }
 
 //Local functions
@@ -116,4 +140,20 @@ void printAddress(DeviceAddress deviceAddress)
         if (deviceAddress[i] < 16) Serial.print("0");
         Serial.print(deviceAddress[i], HEX);
     }
+}
+
+/**
+	Callback attached to schedulerTimer. Serve to advance scheduler
+	@param  none
+ */
+void timerCallbackScheduler()
+{
+    // Calling this function will push the Scheduler forward by one tick.
+   scheduler.advanceScheduler();
+}
+void checkTemperature()
+{
+    sensors.requestTemperatures(); // Send the command to get temperatures
+    Serial.print("Temperature for the device 1 (index 0) is: ");
+    Serial.println(sensors.getTempCByIndex(0));
 }
