@@ -156,5 +156,6 @@ void checkTemperature()
 {
     sensors.requestTemperatures(); // Send the command to get temperatures
     Serial.print("Temperature for the device 1 (index 0) is: ");
-    Serial.println(sensors.getTempCByIndex(0));
+    Serial.print(sensors.getTempCByIndex(0));
+    Serial.print("\r");
 }
