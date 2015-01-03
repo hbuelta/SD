@@ -15,6 +15,7 @@
 //
 // See			ReadMe.txt for references
 //
+// USES EasyScheduler which uses millis and so uses hardware Timer0
 
 
 #include "Arduino.h"
