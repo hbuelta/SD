@@ -285,6 +285,8 @@
 		AA2A141221163501AA000131 /* twi.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141221163501AA000131 /* twi.h */; };
 		AA2A141221163501AA000132 /* Wire.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141221163501AA000132 /* Wire.cpp */; };
 		AA2A141221163501AA000133 /* Wire.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141221163501AA000133 /* Wire.h */; };
+		C414D73E1A5878A40027676F /* MsTimer2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C414D73B1A5878A40027676F /* MsTimer2.cpp */; };
+		C414D73F1A5878A40027676F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C414D73D1A5878A40027676F /* README.md */; };
 		C42092A31A472000005CE836 /* LocalLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = C4C092A31A472000005CE836 /* LocalLibrary.h */; };
 		C42092FD1A472000005CE836 /* SD.ino in Sources */ = {isa = PBXBuildFile; fileRef = C4C092FD1A472000005CE836 /* SD.ino */; };
 		C42A5F021A56E5A9000AF4E1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C42A5EFF1A56E5A9000AF4E1 /* README.md */; };
@@ -576,6 +578,11 @@
 		AAAA141221163501AA000131 /* twi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twi.h; sourceTree = "<group>"; };
 		AAAA141221163501AA000132 /* Wire.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wire.cpp; sourceTree = "<group>"; };
 		AAAA141221163501AA000133 /* Wire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wire.h; sourceTree = "<group>"; };
+		C414D7391A5878A40027676F /* FlashLed.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlashLed.pde; sourceTree = "<group>"; };
+		C414D73A1A5878A40027676F /* keywords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
+		C414D73B1A5878A40027676F /* MsTimer2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MsTimer2.cpp; sourceTree = "<group>"; };
+		C414D73C1A5878A40027676F /* MsTimer2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsTimer2.h; sourceTree = "<group>"; };
+		C414D73D1A5878A40027676F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C42A5EFD1A56E5A9000AF4E1 /* Scheduler.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Scheduler.ino; sourceTree = "<group>"; };
 		C42A5EFE1A56E5A9000AF4E1 /* keywords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
 		C42A5EFF1A56E5A9000AF4E1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -1219,6 +1226,34 @@
 			path = utility;
 			sourceTree = "<group>";
 		};
+		C414D7361A5878A40027676F /* MsTimer2 */ = {
+			isa = PBXGroup;
+			children = (
+				C414D7371A5878A40027676F /* examples */,
+				C414D73A1A5878A40027676F /* keywords.txt */,
+				C414D73B1A5878A40027676F /* MsTimer2.cpp */,
+				C414D73C1A5878A40027676F /* MsTimer2.h */,
+				C414D73D1A5878A40027676F /* README.md */,
+			);
+			path = MsTimer2;
+			sourceTree = "<group>";
+		};
+		C414D7371A5878A40027676F /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				C414D7381A5878A40027676F /* FlashLed */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		C414D7381A5878A40027676F /* FlashLed */ = {
+			isa = PBXGroup;
+			children = (
+				C414D7391A5878A40027676F /* FlashLed.pde */,
+			);
+			path = FlashLed;
+			sourceTree = "<group>";
+		};
 		C42A5EFA1A56E5A9000AF4E1 /* Scheduler */ = {
 			isa = PBXGroup;
 			children = (
@@ -1432,6 +1467,7 @@
 		C4B57ABE1A475CCD00B509E3 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C414D7361A5878A40027676F /* MsTimer2 */,
 				C42A5F041A56E72E000AF4E1 /* TimerOne */,
 				C42A5EFA1A56E5A9000AF4E1 /* Scheduler */,
 				C43C24F41A4DC80100A011E9 /* DallasTemperature */,
@@ -1772,6 +1808,7 @@
 				AA2A141221163501AA00001C /* Stream.h in Sources */,
 				AA2A141221163501AA00001D /* Tone.cpp in Sources */,
 				AA2A141221163501AA00001E /* Udp.h in Sources */,
+				C414D73E1A5878A40027676F /* MsTimer2.cpp in Sources */,
 				AA2A141221163501AA00001F /* USBAPI.h in Sources */,
 				AA2A141221163501AA000020 /* USBCore.cpp in Sources */,
 				AA2A141221163501AA000021 /* USBCore.h in Sources */,
@@ -1784,6 +1821,7 @@
 				AA2A141221163501AA000028 /* wiring_private.h in Sources */,
 				AA2A141221163501AA000029 /* wiring_pulse.c in Sources */,
 				AA2A141221163501AA00002A /* wiring_shift.c in Sources */,
+				C414D73F1A5878A40027676F /* README.md in Sources */,
 				AA2A141221163501AA00002B /* WMath.cpp in Sources */,
 				AA2A141221163501AA00002C /* WString.cpp in Sources */,
 				AA2A141221163501AA00002D /* WString.h in Sources */,

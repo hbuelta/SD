@@ -15,7 +15,7 @@
 //
 // See			ReadMe.txt for references
 //
-// USING HARDWARE TIMER2 
+// USING HARDWARE TIMER2 FOR SCHEDULER ADVANCES
 
 
 #include "Arduino.h"
@@ -26,7 +26,7 @@
 #include "OneWire.h"
 #include "DallasTemperature.h"
 #include "Scheduler.h"
-#include "TimerOne.h"
+#include "MsTimer2.h"
 
 //local constants and macros
 
@@ -37,7 +37,7 @@
 /**
 	Timer1 set to 10ms (100Hz)
  */
-#define HZ100 10000
+#define HZ100 10   // MsTimer2 works on 'millisecond' steps
 
 // local functions declaration
 
@@ -46,12 +46,6 @@ void timerCallbackScheduler(void);
 void checkTemperature(void);
 
 // Define variables and constants
-
-
-/**
-	Hardware Timer1 wrapper object
- */
-TimerOne schedulerTimer;
 
 
 /**
@@ -88,8 +82,8 @@ void setup()
      Serial.print("\n");
      
      //Scheduler timer init
-     schedulerTimer.initialize(HZ100);
-     schedulerTimer.attachInterrupt(timerCallbackScheduler);
+     MsTimer2::set(HZ100, timerCallbackScheduler);
+     MsTimer2::start();
      
      //Scheduler init
      scheduler.createSchedule(100, -1, FALSE, checkTemperature);
