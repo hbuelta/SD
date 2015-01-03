@@ -15,6 +15,7 @@
 //
 // See			ReadMe.txt for references
 //
+// USES Scheduler.h which uses hardware Timer1 and have profiling and some other nice hooks
 // USING HARDWARE TIMER1 FOR SCHEDULER ADVANCES
 
 
