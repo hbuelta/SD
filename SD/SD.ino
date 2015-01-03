@@ -15,6 +15,7 @@
 //
 // See			ReadMe.txt for references
 //
+// USING HARDWARE TIMER1 FOR SCHEDULER ADVANCES
 
 
 #include "Arduino.h"
