@@ -15,6 +15,7 @@
 //
 // See			ReadMe.txt for references
 //
+// USING HARDWARE TIMER2 
 
 
 #include "Arduino.h"
@@ -151,7 +152,12 @@ void timerCallbackScheduler()
     // Calling this function will push the Scheduler forward by one tick.
    scheduler.advanceScheduler();
 }
+/**
+	scheduled task for requesting sensors temperature and serial displaying temp for first sensor
+	@param  none
+ */
 void checkTemperature()
+
 {
     sensors.requestTemperatures(); // Send the command to get temperatures
     Serial.print("Temperature for the device 1 (index 0) is: ");
