@@ -54,42 +54,41 @@ RTC_DS1307 rtc;
 void setup()
  {
     
+     //Start serial
+     
+     Serial.begin(9600);
+     
      // Start Wire lib
-  //   Wire.begin();
+     Wire.begin();
      
      // Start RTC lib
-  //   rtc.begin();
+     rtc.begin();
      
-  //   if (! rtc.isrunning()) {
-  //       Serial.println("RTC is NOT running!");
-  //       // following line sets the RTC to the date & time this sketch was compiled
-  //       //rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-  //       rtc.adjust(DateTime(2014, 1, 21, 3, 0, 0));
-  //   }
+     // Adjust RTC clock if its not running ( ie no batt )
+     if (! rtc.isrunning()) {
+         Serial.println("RTC is NOT running: adjusting...");
+         // following line sets the RTC to the date & time this sketch was compiled
+         rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+     }
      
      
-    // pinMode(chipSelectPin, OUTPUT);
+     pinMode(chipSelectPin, OUTPUT);
     
-   //  if(!SD1.begin(chipSelectPin)){
+     if(!SD1.begin(chipSelectPin)){
          
-         //TODO: maybe light up red led // debug message to Serial console
-    // }
+         Serial.println("SD not init");
+     }
 
  
 }
 
 
-// Add loop code
 /**
 	Sketch loop
 	@param  none
  */
 void loop()
  {
-     
-     Serial.println("Hola");
-     
-/*
      DateTime now = rtc.now();
      
      Serial.print(now.year(), DEC);
@@ -103,8 +102,5 @@ void loop()
      Serial.print(now.minute(), DEC);
      Serial.print(':');
      Serial.print(now.second(), DEC);
-     Serial.println();
-*/
-     
-     delay(1000);
+     Serial.print("\r");
  }
