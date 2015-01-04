@@ -16,7 +16,7 @@
 // See			ReadMe.txt for references
 //
 // USING HARDWARE TIMER2 FOR SCHEDULER ADVANCES
-// USING SCHEDULER.H which offer profiling and some other nice hoks
+// USING SCHEDULER.H which offer profiling and some other nice hooks
 
 #include "Arduino.h"
 
