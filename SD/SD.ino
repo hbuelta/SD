@@ -46,6 +46,22 @@ SDClass SD1;
  */
 RTC_DS1307 rtc;
 
+/**
+	SD File handler
+ */
+File sdFile;
+
+/**
+	String to define log file name
+ */
+String FileNameString;
+
+/**
+	RTC object holding date-time
+ */
+DateTime now;
+
+
  
 /**
 	Sketch setup
@@ -65,21 +81,39 @@ void setup()
      rtc.begin();
      
      // Adjust RTC clock if its not running ( ie no batt )
-     if (! rtc.isrunning()) {
+     if (!rtc.isrunning()) {
          Serial.println("RTC is NOT running: adjusting...");
          // following line sets the RTC to the date & time this sketch was compiled
          rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
      }
      
      
+     // CS pin ( pin 10 on most boards) MUST to be st to uotput (even when using another pin por CS)
      pinMode(chipSelectPin, OUTPUT);
     
      if(!SD1.begin(chipSelectPin)){
          
-         Serial.println("SD not init");
+         Serial.println("SD not init....exiting");
+         return;
      }
-
- 
+     
+     now=rtc.now();
+     
+     // Assign a name to log file : DD/MM/YYYY-HH:MM:SS ( and some needed conversion from String object to char*
+     
+     FileNameString=String(now.day())+'/'+String(now.month())+'/'+String(now.year())+'-'+String(now.hour())+':'+String(now.minute())+':'+String(now.second())+'.txt';
+     int str_len = FileNameString.length() + 1;
+     char sdFileName[str_len];
+     FileNameString.toCharArray(sdFileName, str_len);
+     sdFile = SD.open(sdFileName, FILE_WRITE);
+     sdFile.close(); // close it...just for testing
+     if(SD.exists(sdFileName)){
+         Serial.print("File:");
+         Serial.print(FileNameString);
+         Serial.print(" opened on SD card");
+         Serial.println();
+     }
+     
 }
 
 
@@ -89,18 +123,5 @@ void setup()
  */
 void loop()
  {
-     DateTime now = rtc.now();
      
-     Serial.print(now.year(), DEC);
-     Serial.print('/');
-     Serial.print(now.month(), DEC);
-     Serial.print('/');
-     Serial.print(now.day(), DEC);
-     Serial.print(' ');
-     Serial.print(now.hour(), DEC);
-     Serial.print(':');
-     Serial.print(now.minute(), DEC);
-     Serial.print(':');
-     Serial.print(now.second(), DEC);
-     Serial.print("\r");
- }
+      }
