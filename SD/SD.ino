@@ -35,12 +35,6 @@
  */
 #define chipSelectPin 10
 
-
-/**
-	SD card object
- */
-SDClass SD1;
-
 /**
 	RTC object for Real Time Clock
  */
@@ -91,7 +85,7 @@ void setup()
      // CS pin ( pin 10 on most boards) MUST to be st to uotput (even when using another pin por CS)
      pinMode(chipSelectPin, OUTPUT);
     
-     if(!SD1.begin(chipSelectPin)){
+     if(!SD.begin(chipSelectPin)){
          
          Serial.println("SD not init....exiting");
          return;
@@ -100,8 +94,8 @@ void setup()
      now=rtc.now();
      
      // Assign a name to log file : DD/MM/YYYY-HH:MM:SS ( and some needed conversion from String object to char*
-     
-     FileNameString=String(now.day())+'/'+String(now.month())+'/'+String(now.year())+'-'+String(now.hour())+':'+String(now.minute())+':'+String(now.second())+'.txt';
+     // TODO: find a suitable 8.3 log file naming scheme
+     FileNameString=String(now.day())+String(now.month())+".txt";
      int str_len = FileNameString.length() + 1;
      char sdFileName[str_len];
      FileNameString.toCharArray(sdFileName, str_len);
@@ -109,11 +103,10 @@ void setup()
      sdFile.close(); // close it...just for testing
      if(SD.exists(sdFileName)){
          Serial.print("File:");
-         Serial.print(FileNameString);
+         Serial.print(sdFileName);
          Serial.print(" opened on SD card");
          Serial.println();
      }
-     
 }
 
 
