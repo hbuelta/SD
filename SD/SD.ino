@@ -93,9 +93,9 @@ void setup()
      
      now=rtc.now();
      
-     // Assign a name to log file : DD/MM/YYYY-HH:MM:SS ( and some needed conversion from String object to char*
-     // TODO: find a suitable 8.3 log file naming scheme
-     FileNameString=String(now.day())+String(now.month())+".txt";
+     // Assign a name to log file in 8.3 format : DD_MM_YY.TXT ( and some needed conversion from String object to char*)
+     
+     FileNameString=String(now.day())+'_'+String(now.month())+'_'+String(now.year()-2000)+".TXT";
      int str_len = FileNameString.length() + 1;
      char sdFileName[str_len];
      FileNameString.toCharArray(sdFileName, str_len);
