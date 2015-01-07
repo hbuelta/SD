@@ -28,11 +28,16 @@
 // Define variables and constants
 //
 
+
 /**
 	Onewire bus on Arduino pin 3 // NEED FIX IN REAL BOARD
  */
 #define ONE_WIRE_BUS 3
 
+/**
+	RTC object for Real Time Clock
+ */
+RTC_DS1307 rtc;
 
 /**
 	OneWire object // sensors Object
@@ -40,13 +45,20 @@
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
 
-//
-// Brief	Setup
-
-
-// Add setup code 
 /**
-	Sketch setuo
+	String to define log file name
+ */
+String FileNameString;
+
+/**
+	RTC object holding date-time
+ */
+DateTime now;
+
+
+ 
+/**
+	Sketch setup
 	@param  none
  */
 void setup()
@@ -60,12 +72,11 @@ void setup()
      }
 
 
-// Add loop code
 /**
 	Sketch loop
 	@param  none
  */
 void loop()
  {
-    
-}
+     
+      }
