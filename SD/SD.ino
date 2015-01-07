@@ -48,11 +48,16 @@ void checkTemperature(void);
 // Define variables and constants
 
 
+
 /**
 	Scheduler object that will advance 1 step every overflow of schedulerTimer
  */
 Scheduler scheduler;
 
+/**
+	RTC object for Real Time Clock
+ */
+RTC_DS1307 rtc;
 
 /**
 	Temperature sensor unque address // Always will access sensors by its DeviceAddress
@@ -76,7 +81,9 @@ DallasTemperature sensors(&oneWire);
  */
 void setup()
  {
-     // start serial port
+    
+     //Start serial
+     
      Serial.begin(9600);
      Serial.println("Dallas Temperature Sensor Test");
      Serial.print("\n");
@@ -110,7 +117,6 @@ void setup()
  }
 
 
-// Add loop code
 /**
 	Sketch loop
 	@param  none

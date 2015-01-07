@@ -25,7 +25,7 @@
 #	LiquidCrystal Robot_Control Robot_Motor SD Servo SoftwareSerial SPI 
 #	Stepper TFT WiFi Wire 
 #
-APP_LIBS_LIST = 0
+APP_LIBS_LIST = SD Wire
 
 # List user's libraries here 
 # default = 0 = none
