@@ -31,7 +31,8 @@ APP_LIBS_LIST = SD Wire
 # default = 0 = none
 #
 #
-USER_LIBS_LIST = OneWire DallasTemperature Scheduler MsTimer2
+USER_LIBS_LIST = OneWire DallasTemperature Scheduler MsTimer2 RTClib
+
 
 # List core, application and user's libraries to be excluded
 # For example, WiFi may crash on Arduino 1.0.2, Esplora on Arduino 1.0.3, Firmata on Teensy 3.0,
