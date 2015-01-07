@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D19E22F1A5D53410066EEB9 /* RTClib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D19E22D1A5D53410066EEB9 /* RTClib.cpp */; };
 		AA2A141221163501AA000005 /* Arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141221163501AA000005 /* Arduino.h */; };
 		AA2A141221163501AA000007 /* malloc.c in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141221163501AA000007 /* malloc.c */; };
 		AA2A141221163501AA000008 /* realloc.c in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141221163501AA000008 /* realloc.c */; };
@@ -294,6 +295,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D19E2221A5D53410066EEB9 /* datecalc.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = datecalc.ino; sourceTree = "<group>"; };
+		0D19E2241A5D53410066EEB9 /* ds1307.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ds1307.ino; sourceTree = "<group>"; };
+		0D19E2261A5D53410066EEB9 /* ds1307nvram.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ds1307nvram.ino; sourceTree = "<group>"; };
+		0D19E2281A5D53410066EEB9 /* ds1307SqwPin.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ds1307SqwPin.ino; sourceTree = "<group>"; };
+		0D19E22A1A5D53410066EEB9 /* softrtc.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = softrtc.ino; sourceTree = "<group>"; };
+		0D19E22B1A5D53410066EEB9 /* keywords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
+		0D19E22C1A5D53410066EEB9 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		0D19E22D1A5D53410066EEB9 /* RTClib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RTClib.cpp; sourceTree = "<group>"; };
+		0D19E22E1A5D53410066EEB9 /* RTClib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTClib.h; sourceTree = "<group>"; };
 		AAAA141221163501AA000005 /* Arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arduino.h; sourceTree = "<group>"; };
 		AAAA141221163501AA000007 /* malloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = malloc.c; sourceTree = "<group>"; };
 		AAAA141221163501AA000008 /* realloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = realloc.c; sourceTree = "<group>"; };
@@ -684,6 +694,70 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		0D19E21F1A5D53410066EEB9 /* RTClib */ = {
+			isa = PBXGroup;
+			children = (
+				0D19E2201A5D53410066EEB9 /* examples */,
+				0D19E22B1A5D53410066EEB9 /* keywords.txt */,
+				0D19E22C1A5D53410066EEB9 /* README.txt */,
+				0D19E22D1A5D53410066EEB9 /* RTClib.cpp */,
+				0D19E22E1A5D53410066EEB9 /* RTClib.h */,
+			);
+			path = RTClib;
+			sourceTree = "<group>";
+		};
+		0D19E2201A5D53410066EEB9 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				0D19E2211A5D53410066EEB9 /* datecalc */,
+				0D19E2231A5D53410066EEB9 /* ds1307 */,
+				0D19E2251A5D53410066EEB9 /* ds1307nvram */,
+				0D19E2271A5D53410066EEB9 /* ds1307SqwPin */,
+				0D19E2291A5D53410066EEB9 /* softrtc */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		0D19E2211A5D53410066EEB9 /* datecalc */ = {
+			isa = PBXGroup;
+			children = (
+				0D19E2221A5D53410066EEB9 /* datecalc.ino */,
+			);
+			path = datecalc;
+			sourceTree = "<group>";
+		};
+		0D19E2231A5D53410066EEB9 /* ds1307 */ = {
+			isa = PBXGroup;
+			children = (
+				0D19E2241A5D53410066EEB9 /* ds1307.ino */,
+			);
+			path = ds1307;
+			sourceTree = "<group>";
+		};
+		0D19E2251A5D53410066EEB9 /* ds1307nvram */ = {
+			isa = PBXGroup;
+			children = (
+				0D19E2261A5D53410066EEB9 /* ds1307nvram.ino */,
+			);
+			path = ds1307nvram;
+			sourceTree = "<group>";
+		};
+		0D19E2271A5D53410066EEB9 /* ds1307SqwPin */ = {
+			isa = PBXGroup;
+			children = (
+				0D19E2281A5D53410066EEB9 /* ds1307SqwPin.ino */,
+			);
+			path = ds1307SqwPin;
+			sourceTree = "<group>";
+		};
+		0D19E2291A5D53410066EEB9 /* softrtc */ = {
+			isa = PBXGroup;
+			children = (
+				0D19E22A1A5D53410066EEB9 /* softrtc.ino */,
+			);
+			path = softrtc;
+			sourceTree = "<group>";
+		};
 		AAAA141221163501AA000000 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1342,6 +1416,7 @@
 		C4B57ABE1A475CCD00B509E3 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				0D19E21F1A5D53410066EEB9 /* RTClib */,
 				C43C24F41A4DC80100A011E9 /* DallasTemperature */,
 				C43C24E81A4DC7F600A011E9 /* OneWire */,
 				C4B57ABF1A475CCD00B509E3 /* readme.txt */,
@@ -1709,6 +1784,7 @@
 				AA2A141221163501AA00003A /* new.h in Sources */,
 				AA2A141221163501AA00003B /* Platform.h in Sources */,
 				AA2A141221163501AA00003C /* Print.cpp in Sources */,
+				0D19E22F1A5D53410066EEB9 /* RTClib.cpp in Sources */,
 				AA2A141221163501AA00003D /* Print.h in Sources */,
 				AA2A141221163501AA00003E /* Printable.h in Sources */,
 				AA2A141221163501AA00003F /* Server.h in Sources */,
