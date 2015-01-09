@@ -246,6 +246,8 @@ void checkTemperature()
     Serial.print(sensors.getTempCByIndex(0));
     Serial.print("\r");
     
+    rtc.now();
+    
     sdFile.print(now.day(), DEC);
     sdFile.print('/');
     sdFile.print(now.month(), DEC);
