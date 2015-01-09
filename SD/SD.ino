@@ -128,7 +128,7 @@ void setup()
      sensors.begin();
      
      //Scheduler init
-     scheduler.createSchedule(30000, -1, FALSE, checkTemperature);  // 5 minutes schedule
+     scheduler.createSchedule(15000, -1, FALSE, checkTemperature);  // 5 minutes schedule
      
      // Start RTC lib
      rtc.begin();
@@ -246,7 +246,7 @@ void checkTemperature()
     Serial.print(sensors.getTempCByIndex(0));
     Serial.print("\r");
     
-    rtc.now();
+    now=rtc.now();
     
     sdFile.print(now.day(), DEC);
     sdFile.print('/');
